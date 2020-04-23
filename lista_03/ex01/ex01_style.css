@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    font-family: fantasy;
+}
+
+div {
+    font-size: 30px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-rows: auto auto auto auto;
+    padding: 10px;
+}
+
+div[class^="block0"] {
+    /* background-color: lightskyblue;
+    border: 1px solid lightskyblue;
+    border-radius: 5px; */
+    text-align: left;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+}
+
+.sidebar{
+    grid-row: 1 / 6;
+    background-color: gainsboro;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    text-align: left;
+    align-self: flex-start;
+    font-size: small;
+}
+
+.side_title{
+    color:gray;
+    font-weight: 900;    
+    display: block;
+    padding-left: 20px;
+}
+
+.side_link>a{
+    width: 100%;
+    display: block;
+    padding-left: 20px;    
+    text-decoration: none;
+}
+
+.side_link:hover>a {
+    background-color: rgb(46, 46, 245);
+    color: gainsboro;
+}
+
+.banner{
+    grid-column: 2/5;
+    text-align: left;
+    background-color: gainsboro;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+.banner_title {
+    margin: 0;
+}
+
+.banner_text {
+    font-size: large;
+}
+
+button {
+    border-radius: 3px;
+    /* border: none; */
+    border: 0.5px solid gainsboro;
+    padding: 4px 9px;
+    transition-duration: 300ms;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 0.5px solid gainsboro;
+    cursor: pointer;    
+}
+
+.buttonblue{
+    background-color: rgb(46, 46, 245);
+    color: whitesmoke;    
+}
+
+.block_title{
+    margin: 0px;
+}
+
+.block_desc{
+    font-size: medium;
+}

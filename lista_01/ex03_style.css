@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+}
+p {
+    font-family: Arial;
+    font-size: 20px;
+    text-align: justify;
+}
+
+p:not(:first-of-type) {
+    text-align: center;
+}

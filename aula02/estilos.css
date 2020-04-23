@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+}
+table, td, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+}
+td {
+    text-align: left;
+    padding: 3px;
+}
+table {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.noturno{
+    background-color: cornsilk;
+    text-align: center;
+    font-style: italic;
+}
+
+#nomedocurso{
+    color: green;
+    font-weight: 900;
+}

@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+/* form box style */
+.form{
+    background-color: white;
+    /* border: 2px solid black; */
+    /* grid-column: 2/3; */
+    width: 410px;
+    height: 350px;
+}
+
+.title {
+    text-align: left;
+    /* padding-left: 12px; */
+    margin: 12px 20px 8px 10px;
+    border-bottom: 1px solid lightgray;
+    font-size: 20px;
+    font-family: fantasy;
+    font-weight: 600;
+    color: black;
+}
+
+
+/* all forms margin */
+.line1 input[type="text"], .line2 input[type="text"], .city input[type="text"], .city input[type="text"], .state input[type="text"],.postcode input[type="text"], .country input[type="text"],.btn_cancel input[type="button"], .btn_save input[type="button"]{
+    margin: 8px 0px;
+    margin-left: 30px;
+    border: 2px solid lightgrey;
+    border-radius: 3px;
+    height: 30px;
+    width: 300px;
+    padding-left: 8px;
+    font-family: fantasy;
+}
+
+.line1 input[type="text"]:focus, .line2 input[type="text"]:focus, .city input[type="text"]:focus, .city input[type="text"]:focus, .state input[type="text"]:focus,.postcode input[type="text"]:focus, .country input[type="text"]:focus {
+    border: 1px solid rgb(59, 135, 211) !important;
+    box-shadow: 0 0 3px rgb(59, 135, 211) !important;
+    -moz-box-shadow: 0 0 3px rgb(59, 135, 211) !important;
+    -webkit-box-shadow: 0 0 3px rgb(59, 135, 211) !important;
+}
+
+/* name and email style */
+.line1, .line2, .city, .state, .postcode, .country {
+    text-align: left;
+    font-family: fantasy;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.campo {
+    display: inline-block;
+    width: 55px;
+    text-align: right;
+    /* border: 1px solid black; */
+}
+.country > .campo {
+    padding-left: 8px;
+}
+.postcode > .campo {
+    padding-left: 15px;
+}
+
+.postcode input[type="text"], .state input[type="text"] {
+    width: 103px;
+}
+
+.name input[type="text"], .email input[type="email"], .message > textarea, .btn input[type="button"], .phone input[type="tel"], .web input[type="url"]{
+    border: 2px solid rgb(228, 228, 228);
+    border-radius: 2px;
+}
+
+.name input[type="text"], .email input[type="email"], .phone input[type="tel"], .web input[type="url"] {
+    width: 330px;
+    height: 40px;
+    padding-left: 8px;
+    font-family: fantasy;
+    font-size: 12px;
+    color: rgb(112, 112, 112);
+}
+
+/* button style */
+.buttons {
+    padding-right: 22px;
+    text-align: right;
+}
+
+.btn_save input[type="button"], .btn_cancel input[type="button"]{
+    width: 70px;
+    margin: 0px;
+    transition-duration: 300ms;
+    font-weight: bold;
+    font-family: fantasy;
+}
+
+.btn_cancel input[type="button"] {
+    background-color: white;
+}
+
+.btn_save input[type="button"] {
+    color: white;
+    background-color: rgb(59, 135, 211);
+    border: none;
+}
+
+.btn_save input[type="button"]:hover {
+    background-color: rgb(72, 159, 245);
+    cursor: pointer;
+}
+
+.btn_cancel input[type="button"]:hover {
+    background-color: rgb(223, 223, 223);
+    cursor: pointer;
+}

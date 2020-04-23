@@ -1,0 +1,21 @@
+h1, h3 {
+    text-align: center;
+}
+
+p {
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+}
+
+p:first-of-type {
+    min-height: 100px;
+}
+
+.back {
+	float: left;
+}
+
+.next {
+	float: right;
+}

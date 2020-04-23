@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: fantasy;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+/* form box style */
+.form{
+    background-color: rgb(0, 182, 185);
+    border-radius: 1px;
+    /* grid-column: 2/3; */
+    padding: 10%;
+}
+
+/* header style */
+.header {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+
+/* all forms margin */
+.name input[type="text"], .email input[type="email"], .message > textarea, .check_box input[type="checkbox"], .btn input[type="submit"]{
+    margin: 3.5% 0;
+}
+
+/* name and email style */
+.name input[type="text"], .email input[type="email"], .message > textarea, .btn input[type="submit"], .check_box > .checkmark{
+    border: 0;
+    border-radius: 1px;
+    box-shadow: 3px 3px 3px rgb(1, 145, 148);
+}
+
+.name input[type="text"], .email input[type="email"] {
+    width: 100%;
+    padding-left: 8px;
+    font-family: fantasy;
+    font-size: 15px;
+    color: rgb(185, 185, 185);
+    height: 25px;
+}
+
+/* checkbox trying to style */
+.check_box {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  color: white;
+  text-align: left;
+}
+
+.check_box input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;    
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: white;
+}
+
+.check_box:hover input ~ .checkmark {
+    background-color: lightgray;
+}
+
+.check_box:hover input:checked ~ .checkmark {
+    background-color: white;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 5px;
+    top: 0px;
+    width: 3px;
+    height: 10px;
+    border: solid gray;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* textarea style */
+.message > textarea{
+    resize: none;
+    outline: none;
+    padding-left: 8px;
+    font-family: fantasy;
+    font-size: 15px;
+    color: rgb(185, 185, 185);
+    width: 100%;
+}
+
+/* button style */
+.btn {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.btn input[type="submit"] {
+    background-color: white;
+    border: none;
+    width: 120px;
+    height: 30px;
+    font-size: medium;
+    color: rgb(185, 185, 185);
+    font-weight: bold;
+    transition-duration: 300ms;
+
+}
+
+.btn input[type="submit"]:hover {
+    /* border: 0.3px solid rgb(185, 185, 185); */
+    background-color: whitesmoke;
+    cursor: pointer;
+}

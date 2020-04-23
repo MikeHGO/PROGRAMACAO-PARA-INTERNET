@@ -1,0 +1,114 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: fantasy;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-content: center;
+}
+
+/* form box style */
+.form {
+	border-radius: 1px;
+	border: 3px solid rgb(131, 115, 235);
+	/* grid-column: 2/3; */
+	width: 430px;
+	height: 470px;
+}
+
+/* header style */
+.header {
+	text-align: center;
+	background-color: black;
+	background-image: url("https://p2.piqsels.com/preview/521/94/524/architectural-design-architecture-black-and-white-building-thumbnail.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	height: 100px;
+	display: grid;
+	align-items: center;
+	margin-bottom: 25px;
+}
+
+/* all forms margin */
+.name input[type="text"],
+.email input[type="email"],
+.message > textarea,
+.phone input[type="tel"],
+.btn input[type="button"] {
+	margin: 5px 0px;
+}
+
+/* name and email style */
+.name,
+.email,
+.phone {
+	text-align: center;
+}
+
+.name input[type="text"],
+.email input[type="email"],
+.message > textarea,
+.btn input[type="button"],
+.phone input[type="tel"] {
+	border: 2px solid rgb(245, 245, 245);
+	border-radius: 2px;
+	/* box-shadow: 3px 3px 3px rgb(1, 145, 148); */
+}
+
+.name input[type="text"],
+.email input[type="email"],
+.phone input[type="tel"] {
+	width: 330px;
+	height: 40px;
+	padding-left: 8px;
+	font-family: fantasy, FontAwesome;
+	font-size: 13px;
+	color: rgb(185, 185, 185);
+}
+
+/* textarea style */
+.message {
+	text-align: center;
+}
+
+.message > textarea {
+	/* resize: none; */
+	width: 330px;
+	padding-left: 8px;
+	padding-top: 8px;
+	font-family: fantasy, FontAwesome;
+	font-size: 14px;
+	color: rgb(185, 185, 185);
+}
+
+/* button style */
+.btn {
+	text-align: center;
+}
+
+.btn input[type="button"] {
+	background-color: rgb(131, 115, 235);
+	border: none;
+	margin: 15px;
+	border-radius: 20px;
+	width: 120px;
+	height: 30px;
+	font-size: 11px;
+	color: white;
+	font-weight: bold;
+	transition-duration: 300ms;
+}
+
+.btn input[type="button"]:hover {
+	background-color: rgb(167, 153, 255);
+	cursor: pointer;
+}

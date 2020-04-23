@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: fantasy;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 20px;
+    grid-template-rows: auto auto auto auto auto;
+    /* padding: 5px 5px; */
+}
+
+.header {
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    background-color: rgb(44, 43, 43);
+    border-radius: 4px;
+    height: 40px;
+    text-align: center;
+}
+
+span[class^="header_item"] {
+    padding: 10px 0px;
+    color: lightgray;
+    font-size: medium;
+}
+
+span[class^="header_item"]:hover {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.header_home {
+    padding: 10px 0px;
+    color: white;
+    font-size: large;
+}
+
+.header_home:hover {    
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.header_search {
+    /* padding: 10px 2px; */
+    /* width: 100vmin; */
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+input[type=text] {
+    border-radius: 20px;
+    background-color: lightgray;
+    border: none;
+    height: 30px;
+    width: 200px;
+    padding-left: 10px;    
+}
+
+.header_item_06 {
+    grid-column: 27/28;
+}
+
+.sidebar {
+    background-color: lightgray;
+    grid-row: 2/4;
+    border-radius: 4px;
+}
+
+.sidebar > span {
+    display: block;
+    width: 100%;
+}
+
+span {
+    padding-left: 10px;
+    width: 100%;
+}
+.side_title {
+    color: gray;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.span>a{
+    width: 100%;
+    display: block;
+}
+
+.side_link {
+    text-decoration: none;
+}
+
+span:hover{
+    background-color: rgb(46, 46, 245);
+    color: white;
+}
+
+.dashboard {
+    grid-column: 2/6;
+    grid-row: 2;    
+}
+
+.dashboard_title {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.dashboard > .banner{
+    padding: 50px;
+    background-color: lightgray;
+    border-radius: 4px;    
+}
+
+.banner_title {
+    margin: 0;
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.banner_text {
+    font-size: large;
+    padding: 5px 0px;
+}
+
+button {
+    height: 35px;
+    width: 100px;
+    border-radius: 3px;
+    border: 0.5px solid gainsboro;
+    padding: 4px 9px;
+    transition-duration: 300ms;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 0.5px solid gainsboro;
+    cursor: pointer;    
+}
+
+.buttonblue{
+    background-color: rgb(46, 46, 245);
+    color: whitesmoke;    
+}
+
+.buttonwhite {
+    background-color: lightcoral;
+    color: whitesmoke;
+}
+
+.track {
+    display: grid;
+    grid-template-columns: auto auto auto auto;    
+    grid-row: 3;
+    grid-column: 2/6;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.track_num {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.track_title {
+    color: gray;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.project_table {
+    grid-column: 2/6;    
+}
+
+.table_title {
+    font-weight: bold;
+    font-size: x-large;    
+}
+
+table {
+    width: 100%;
+}
+
+table, tr, th, td{
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    padding: 4px 50px;
+    text-align: left;
+}
+
+.row_color {
+    background-color: whitesmoke;
+}
+
+.table_view {
+    text-decoration: none;
+}
+
+.footer {
+    grid-column: 1/6;
+    border-top: 1px solid whitesmoke;    
+    font-size: smaller;
+}

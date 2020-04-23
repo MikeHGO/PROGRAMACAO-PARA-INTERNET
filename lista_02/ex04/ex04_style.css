@@ -1,0 +1,15 @@
+table, td, th{
+    border: 1px solid black;
+}
+table, #title{
+    width: 400px;
+}
+#title{
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+    margin: 2px;
+}
+.cidades{
+    font-style:italic;
+}

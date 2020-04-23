@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    font-size: 30px;
+    font-weight: 900;
+    background-color: seagreen;
+    padding: 30px;
+    display: block;
+    clear: both;    
+}
+
+.disc {
+    background-color: lightskyblue;
+    float: left;
+}
+
+.box {    
+    width: 49.8%;
+    margin-top: 0.4%;
+    margin-bottom: 0.4%;
+}
+
+.prof {
+    background-color: lightpink;
+    float: right;    
+}
+
+.footer {
+    background-color: seagreen;
+    text-align: center;
+    display: block;
+    clear: both;
+}

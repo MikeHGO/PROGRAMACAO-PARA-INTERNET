@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+/* form box style */
+.form{
+    background-color: whitesmoke;
+    border-radius: 1px;
+    border: 2px solid mediumseagreen;
+    border-bottom: 5px solid mediumseagreen;
+    /* grid-column: 2/3; */
+    width: 430px;
+    height: 470px;
+}
+
+.title {
+    text-align: left;
+    padding-left: 45px;
+    margin: 12px 0px;
+    font-size: 30px;
+    font-family: fantasy;
+    color: rgb(139, 139, 139);
+}
+
+.sub_title {
+    text-align: left;
+    font-size: 12px;
+    margin: 12px 0px;
+    padding-left: 50px;
+    font-family: fantasy;
+    color: rgb(139, 139, 139);
+}
+
+/* all forms margin */
+.name input[type="text"], .email input[type="email"], .message > textarea, .phone input[type="tel"], .web input[type="url"], .btn input[type="button"]{
+    margin: 5px 0px;
+}
+
+/* name and email style */
+.name, .email, .phone, .web {
+    text-align: center;
+}
+
+.name input[type="text"], .email input[type="email"], .message > textarea, .btn input[type="button"], .phone input[type="tel"], .web input[type="url"]{
+    border: 2px solid rgb(228, 228, 228);
+    border-radius: 2px;
+}
+
+.name input[type="text"], .email input[type="email"], .phone input[type="tel"], .web input[type="url"] {
+    width: 330px;
+    height: 40px;
+    padding-left: 8px;
+    font-family: fantasy;
+    font-size: 12px;
+    color: rgb(112, 112, 112);
+}
+
+/* textarea style */
+.message {
+    text-align: center;
+}
+
+.message > textarea{
+    resize: none;
+    width: 330px;
+    padding-left: 8px;
+    padding-top: 8px;
+    font-family: fantasy;
+    font-size: 12px;
+    color: rgb(112, 112, 112);
+}
+
+/* button style */
+.btn {
+    text-align: center;
+}
+
+.btn input[type="button"] {
+    background-color: mediumseagreen;
+    border: none;
+    margin: 15px;
+    /* border-radius: 20px; */
+    width: 330px;
+    height: 30px;
+    font-family: fantasy;
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    transition-duration: 300ms;
+}
+
+.btn input[type="button"]:hover {
+    background-color: rgb(72, 209, 134);
+    cursor: pointer;
+}

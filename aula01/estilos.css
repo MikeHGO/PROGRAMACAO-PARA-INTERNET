@@ -1,0 +1,28 @@
+/*CSS*/
+/*Cascading Styling Sheets*/
+/*Três forma de usar o CSS:
+
+1) Inline
+2) Interno
+3) Externo
+
+Sintaxe do CSS
+tag [opcionais] {
+    propriedade: valor;
+    propriedade: valor;
+    propriedade: valor;
+    propriedade: valor;
+}
+
+*/
+p {
+    background-color: black;
+    color: azure;
+}
+p:first-of-type{
+    text-align: center;
+}
+
+p:last-of-type{
+    color:darkturquoise
+}

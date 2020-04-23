@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: fantasy;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-rows: auto auto auto;
+    padding: 3px 100px;
+}
+
+div[class^="block0"] {    
+    text-align: left;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+}
+
+.banner{
+    grid-column: 1/4;
+    text-align: left;
+    background-color: gainsboro;
+    padding: 33px 50px;
+    border-radius: 4px;
+}
+
+.banner_title {
+    margin: 0;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.banner_text {
+    font-size: large;
+    padding: 5px 0px;
+}
+
+button {
+    height: 35px;
+    width: 100px;
+    border-radius: 3px;
+    border: 0.5px solid gainsboro;
+    padding: 4px 9px;
+    transition-duration: 300ms;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 0.5px solid gainsboro;
+    cursor: pointer;    
+}
+
+.buttonblue{
+    background-color: rgb(46, 46, 245);
+    color: whitesmoke;    
+}
+
+.block_title{
+    font-weight: bold;
+    font-size: x-large;
+    margin: 3px 0px;
+}
+
+.block_desc{
+    font-size: medium;
+    margin: 8px 0px;
+}
+
+.footer {
+    grid-column: 1/4;
+    border-top: 1px solid whitesmoke;
+    font-size: smaller;
+}

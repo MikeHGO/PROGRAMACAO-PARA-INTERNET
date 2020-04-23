@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    box-shadow: 2px 2px 4px 6px #888888;
+    border-radius: 6px;
+    background-color: white;
+    width: 245px;
+    min-height: 350px;
+    margin: 0 auto;    
+    font-family: fantasy;
+    text-align: center;
+    display: block;
+    border: 1px solid white;
+}
+
+img {
+    height: 100px;
+    width: auto;
+}
+
+.grampo {    
+    margin: 1rem auto 1rem auto;
+    background-color: black;
+    border-radius: 6px;
+    width: 45px;
+    height: 8px;
+}
+
+.logo, .empresa {
+    margin: 1rem;
+}
+
+.bot {
+    background-color: black;
+    color: white;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    margin: 47px auto 0 auto;
+    min-height: 90px;
+}
+
+.nome {
+    border-top: 5px solid gray;    
+    padding-top: 1rem;
+}
+
+.funcao {
+    padding: 1rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+}

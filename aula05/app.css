@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+div#div1 {
+    background-color: brown;
+    color: white;
+    width: 100px;
+    height: 20px;
+    margin: 0 auto;
+}

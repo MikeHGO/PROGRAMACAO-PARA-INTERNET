@@ -1,0 +1,14 @@
+.table_01, tr, td, th {
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 8px;
+    width: 50%;
+}
+
+.table_01  tr:nth-child(even) {
+    background-color: skyblue;
+}
+
+.table_01  tr:nth-child(odd) {
+    background-color: plum;
+}

@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: lavender;
+    width: 400px;
+    min-height: 400px;
+    margin: 0 auto;
+    padding: 3rem;
+}
