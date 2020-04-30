@@ -1,0 +1,63 @@
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: fantasy;
+	background-color: whitesmoke;
+	height: 90vmax;
+}
+
+#left,
+#right {
+	text-align: center;
+	font-size: 4rem;
+	border: 0.25rem solid black;
+	border-radius: 5rem;
+	width: 5rem;
+	margin: 2rem;
+	transition: 300ms;
+}
+
+#left:hover,
+#right:hover {
+	cursor: pointer;
+	filter: contrast(20%);
+}
+
+#card {
+	min-width: 20%;
+}
+
+#name,
+#id,
+#types {
+	margin: 1rem 0.125rem;
+	text-align: left;
+	border: 1px solid magenta;
+}
+
+#name {
+	font-weight: 900;
+}
+
+#ulist {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li + li {
+	margin: 1rem 0;
+}
+
+#sprite {
+	display: block;
+	margin: 0 auto;
+	/* border: 1px solid red; */
+	border-radius: 1rem;
+	background-color: floralwhite;
+}
