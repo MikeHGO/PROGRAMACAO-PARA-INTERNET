@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="start">
+			<div id="menu">POKE BINGO</div>
+
+			<div class="generations_title">CHOOSE A GENERATION</div>
+
+			<div class="generations_radios">
+				<div class="radio_gen">
+					<input type="radio" id="gen1" name="gen" value="1" checked />
+					<label for="gen1">
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+								alt=""
+							/>
+						</div>
+					</label>
+				</div>
+
+				<div class="radio_gen">
+					<input type="radio" id="gen2" name="gen" value="2" />
+					<label for="gen2">
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png"
+								alt=""
+							/>
+						</div>
+					</label>
+				</div>
+
+				<div class="radio_gen">
+					<input type="radio" id="gen3" name="gen" value="3" />
+					<label for="gen3">
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/252.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/255.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/258.png"
+								alt=""
+							/>
+						</div>
+					</label>
+				</div>
+
+				<div class="radio_gen">
+					<input type="radio" id="gen4" name="gen" value="4" />
+					<label for="gen4">
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/387.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/390.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/393.png"
+								alt=""
+							/>
+						</div>
+					</label>
+				</div>
+
+				<div class="radio_gen">
+					<input type="radio" id="gen5" name="gen" value="5" />
+					<label for="gen5">
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/495.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/499.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/501.png"
+								alt=""
+							/>
+						</div>
+					</label>
+				</div>
+
+				<div class="radio_gen">
+					<input type="radio" id="gen6" name="gen" value="6" />
+					<label for="gen6">
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/650.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/653.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/656.png"
+								alt=""
+							/>
+						</div>
+					</label>
+				</div>
+
+				<div class="radio_gen">
+					<input type="radio" id="gen7" name="gen" value="7" />
+					<label for="gen7">
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/722.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/725.png"
+								alt=""
+							/>
+						</div>
+						<div class="pokemon">
+							<img
+								src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/728.png"
+								alt=""
+							/>
+						</div>
+					</label>
+				</div>
+			</div>
+			<button id="start">START</button>
+		</div>
+		<div class="container">
+			<div class="card01">
+				<div class="bingo">
+					<button id="btn">BINGO</button>
+				</div>
+				<div id="cartela"></div>
+			</div>
+			<div class="card02">
+				<div id="countdown"></div>
+				<div class="pokemon">
+					<img id="new_number" src="" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="header">
+			<input type="text" placeholder="Pokemon name, ID" class="input_search" id="input_search" />
+			<button class="btn" id="btn_search">Buscar</button>
+            <button class="btn" id="btn_random">Random</button>
+            <button class="btn" id="left"><</button>
+            <button class="btn" id="right">></button>
+		</div>
+
+		<div class="container">
+			<div class="card01">
+				<img
+					src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/786.png"
+					alt=""
+					id="sprite"
+				/>
+					<div class="" id="name"></div>
+					<div class="" id="id"></div>
+					<div id="height">Height: 1.53</div>
+					<div id="weight">Weight: 238kg</div>
+
+				<div class="" id="types">
+					<div class="type" id="type01">Fighting</div>
+					<div class="type" id="type02">Psychic</div>
+				</div>
+			</div>
+
+
+			<div class="card02">
+				<div class="status"></div>
+					<div class="status--title">HP</div>
+                    <div class="status--title">Attack</div>
+                    <div class="status--title">Defence</div>
+                    <div class="status--title">Speed</div>
+                    <div class="status--title">Sp Atk</div>
+                    <div class="status--title">Sp Def</div>
+				</div>
+
+				<div class="values">                    
+                    <div class="status--value" id="status_hp"></div>
+                    <div class="status--value" id="status_atk"></div>
+                    <div class="status--value" id="status_def"></div>
+                    <div class="status--value" id="status_spd"></div>
+                    <div class="status--value" id="status_sdef"></div>
+                    <div class="status--value" id="status_satk"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
