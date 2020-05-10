@@ -1,3 +1,4 @@
+// Linhas 39 e 84 para alterar a quantidade de pokemons e cronometro.
 const generation = [
 	// Lista de gerações pokémon
 	{ name: 1, start: 1, amount: 151 },
@@ -37,6 +38,7 @@ function preencher_arrays(gen) {
 	let inicio = generation[gen].start;
 	let qtd = generation[gen].amount;
 
+	// preenche o array_total com os IDs da geracao escolhida
 	for (let index = 0; index < qtd; index++) {
 		array_total[index] = inicio;
 		inicio++;
@@ -54,11 +56,10 @@ function preencher_arrays(gen) {
 	}
 
 	array_cartela_backup = [...array_cartela];
-	// repreenchendo o array com a geracao escolhida
+	// repreenchendo o array_total com os pokemon da cartela
 	array_total = array_total.concat(array_cartela);
 }
 
-// start();
 function start(gen) {
 	// Set up cartela e arrays
 	preencher_arrays(gen);
@@ -89,23 +90,23 @@ function atualiza_contador() {
 function gera_novo_pk() {
 	// se o array estiver vazio todos os pokemon já foram sortedos, portanto, finaliza o jogo.
 	if (array_total.length == 0) {
-		finish(false);
+		return finish(false);
 	}
 	// sortei um index aleatorio
 	let index = random_number(0, array_total.length - 1);
-	// salta o valor do index sorteado
+	// armazena o valor do index sorteado
 	let num = array_total[index];
+	// atualiza o display com o novo pokemon
+	DIV_SORTEADO.src =
+		"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
+		num +
+		".png";
 	// remove o index sorteado
 	array_total.splice(index, 1);
 	// checa o array_cartela e remove o pk caso esteja lá
 	check_rmv(array_cartela, num);
 	// insere no array de sorteados
 	array_total_sorteados.push(num);
-	// atualiza o display com o novo pokemon
-	DIV_SORTEADO.src =
-		"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
-		num +
-		".png";
 }
 
 BINGO_btn.onclick = function () {
@@ -117,13 +118,21 @@ BINGO_btn.onclick = function () {
 	) {
 		return finish(true);
 	}
-	// Marca um X e retorna para o loop
+	// Marca um X no cronometro
 	DIV_COUNT.innerHTML = "X";
+
+	// desabilita o botao para evitar clicks antes do setTimeout(time_loop) ser executado
+	this.disabled = true;
 	setTimeout(timed_loop, 600);
+	// delay para reativar o botao
+	setTimeout(function () {
+		BINGO_btn.disabled = false;
+	}, 800);
 };
 
 document.getElementById("cartela").addEventListener("click", function (event) {
 	let element = event.target;
+	// toggle (insere/remove) classe check nos elementos da cartela para marca-los
 	if (element.tagName == "IMG") {
 		element.parentNode.classList.toggle("check");
 	} else if (element.classList.contains("pokemon")) {
@@ -132,14 +141,22 @@ document.getElementById("cartela").addEventListener("click", function (event) {
 });
 
 function finish(flag) {
+	// pausa o cronometro
+	clearInterval(sorteio_intervalo);
+
+	// altera os textos e botao do primeiro menu
 	let menu = document.getElementById("menu");
 	document.getElementById("start").innerHTML = "AGAIN";
 	if (flag == true) {
 		menu.innerHTML = "YOU\nWIN";
+		menu.style.color = "goldenrod";
 	} else {
 		menu.innerHTML = "YOU\nLOSE";
+		menu.style.color = "silver";
 	}
+	// mostra a tela final
 	document.querySelector(".start").style.display = "flex";
+	document.querySelector(".container").style.display = "none";
 }
 
 function main_menu() {
@@ -153,3 +170,6 @@ function main_menu() {
 document.getElementById("start").onclick = function () {
 	main_menu();
 };
+
+// desativar botão direito
+document.addEventListener("contextmenu", (event) => event.preventDefault());
