@@ -1,0 +1,334 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--ff-primary: "Ubuntu", sans-serif;
+	--ff-secondary: "Source Code Pro", monospace;
+	--fw-reg: 300;
+	--fw-bold: 900;
+
+	--clr-light: #fff;
+	--clr-dark: #303038;
+	--clr-accent: #16e0bd;
+
+	--fs-h1: 3rem;
+	--fs-h2: 2.25rem;
+	--fs-h3: 1.25rem;
+	--fs-body: 1rem;
+
+	--shadow: 0.5em 0.5em 0.75em rgba(0, 0, 0, 0.25),
+		0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+	--bg-gradbot: linear-gradient(
+		0deg,
+		rgb(0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.527) 100%
+	);
+	--bg-gradtop: linear-gradient(
+		180deg,
+		rgb(0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.527) 100%
+	);
+
+	user-select: none;
+}
+
+/* Typography */
+
+body {
+	font-family: var(--ff-primary);
+	font-size: var(--fs-body);
+	font-weight: var(--fw-reg);
+
+	background-image: url("../imgs/texture/simple-horizontal-light.png"),
+		url("../imgs/bg/bg_fuji_dark.jpg");
+	background-position: left bottom;
+	background-attachment: fixed;
+}
+
+h3 {
+	font-family: var(--ff-primary);
+	font-size: var(--fs-h3);
+	font-weight: var(--fw-reg);
+	color: var(--clr-light);
+}
+
+h1 {
+	margin: 0;
+}
+
+.box__title {
+	font-family: var(--ff-primary);
+	font-size: var(--fs-body);
+	font-weight: var(--fw-reg);
+	color: var(--clr-light);
+	text-decoration: none;
+}
+
+/* Layout */
+
+.container {
+	width: 90%;
+	max-width: 900px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.container-flex {
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background: var(--bg-gradtop);
+	padding: 2em 0;
+	filter: opacity(90%);
+}
+
+/* Nav */
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+nav li {
+	margin-left: 2em;
+}
+
+.nav__item {
+	font-family: var(--ff-primary);
+	font-size: var(--fs-body);
+	font-weight: var(--fw-bold);
+	color: var(--clr-light);
+	text-decoration: none;
+	padding: 0.25em 0;
+}
+
+.nav__item:hover,
+.nav__item:focus {
+	color: var(--clr-accent);
+}
+
+.current-page {
+	border-bottom: 1px solid var(--clr-light);
+}
+
+.current-page:hover,
+.current-page:focus {
+	color: var(--clr-light);
+}
+
+@media (max-width: 675px) {
+	nav ul {
+		flex-direction: column;
+	}
+
+	nav li {
+		margin: 0.5em auto;
+	}
+}
+
+/* MAIN */
+
+.main {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+}
+
+.box__item {
+	min-height: 200px;
+	width: 400px;
+	margin: 0 auto;
+	background-size: auto, cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	filter: grayscale(80%);
+	transition-duration: 700ms;
+	z-index: 0;
+}
+
+.box__title {
+	background-color: black;
+	filter: opacity(75%);
+	padding: 0.125em 0.5em;
+}
+
+.box__music {
+	background-image: url("../imgs/texture/asfalt-light.png"),
+		url("../imgs/bg/music.jpg");
+	background-position: top, center;
+}
+
+.box__movies {
+	background-image: url("../imgs/texture/green-dust-and-scratches.png"),
+		url("../imgs/bg/movies_bg.jpg");
+}
+
+.box__tcg {
+	background-image: url("../imgs/texture/noisy.png"),
+		url("../imgs/bg/tcg_bg.jpg");
+	background-position: top, bottom;
+}
+
+.box__games {
+	background-image: url("../imgs/texture/wavecut.png"),
+		url("../imgs/bg/games_bg1.jpg");
+	background-position: top, center;
+}
+
+@media (min-width: 675px) {
+	.container-flex {
+		flex-direction: row;
+		min-height: 700px;
+		width: 100%;
+	}
+}
+
+.box__item:hover,
+.box__item:focus {
+	filter: none;
+	cursor: pointer;
+	transform: scale(1.03);
+	z-index: 10;
+	border-radius: 0.125em;
+	box-shadow: var(--shadow);
+}
+
+/* Footer */
+
+.footer {
+	/* background: var(--clr-dark); */
+	background: var(--bg-gradbot);
+	filter: opacity(90%);
+	color: var(--clr-light);
+	text-align: center;
+	padding: 3em 0;
+	/* position: absolute;
+    width: 100%;
+    bottom: 0; */
+}
+
+.social {
+	text-align: center;
+	margin: 0.7em 0;
+}
+
+.social__img {
+	max-height: 3em;
+	transition-duration: 300ms;
+	filter: grayscale(40%);
+}
+
+.social__img:hover {
+	filter: drop-shadow(2px 2px 5px black) saturate(2) grayscale(40%);
+}
+
+.social__ref {
+	text-decoration: none;
+}
+
+.policy__left {
+	float: left;
+	margin: 0 0 0 1em;
+}
+
+.policy__right {
+	float: right;
+	margin: 0 1em 0 0;
+	text-decoration: none;
+	color: var(--clr-light);
+}
+
+.policy__right:hover,
+.policy__right:focus {
+	text-decoration: underline;
+}
+
+/* Privacy */
+
+.privacy-policy,
+.disclaimers,
+.music,
+.contact,
+.movie,
+.game {
+	text-align: left;
+	color: var(--clr-light);
+	background-color: var(--clr-dark);
+	filter: opacity(90%);
+	padding: 2em;
+}
+
+.privacy-policy a,
+.disclaimers a,
+.game__resources a {
+	color: var(--clr-accent);
+}
+
+/* MUSIC */
+
+.music__album,
+.movie__box {
+	display: flex;
+}
+
+#youtube-audio {
+	margin: 2em;
+}
+
+.music__lyrics--title {
+	font-size: 1.5rem;
+}
+
+.music__lyrics--lyrics {
+	font-size: var(--fs-h3);
+}
+
+/* CONTACT */
+
+.contact {
+	align-items: center;
+	min-height: 700px;
+	text-align: center;
+}
+
+.contact__box {
+	font-family: fantasy, FontAwesome;
+	width: 330px;
+	margin: 0 0 0.5em 0;
+	resize: none;
+}
+
+.btn {
+	background: white;
+	border: none;
+	border-radius: 1px;
+	filter: opacity(90%);
+	transition-duration: 300ms;
+}
+
+.btn:hover {
+	filter: drop-shadow(1px 1px 5px black) saturate(2) grayscale(40%);
+}
+
+/* Movie */
+
+.movie__info,
+.game__info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.movie__cast {
+	padding-left: 0.5em;
+}
+
+iframe {
+	border: none;
+}
